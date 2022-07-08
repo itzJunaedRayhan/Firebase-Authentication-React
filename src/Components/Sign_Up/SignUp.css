@@ -1,0 +1,361 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Muli-Regular";
+    color: #666;
+    font-size: 13px;
+    margin: 0;
+}
+
+input, textarea, select, button {
+    font-family: "Muli-Regular";
+    color: rgb(201, 195, 195);
+    font-size: 13px;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+:focus {
+    outline: none;
+}
+
+
+.wrapper {
+    background-color: rgb(24, 22, 22);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inner {
+    height: 100%;
+    min-width: 1080px;
+    background: url("../../images/Abstract-Yellow-liquid-shape.png");
+    background-position: right center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.inner h3 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: "Muli-Bold";
+    text-align: center;
+    margin-bottom: 32px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+form {
+    width: 50%;
+    padding: 25px 40px;
+    box-shadow: inset 10px 7px 7px #050505, inset -3px -3px 10px 3px #070707a6;
+}
+
+.form-group {
+    display: flex;
+}
+
+.form-group .form-wrapper {
+    width: 50%;
+    position: relative;
+}
+
+.form-group .form-wrapper:first-child {
+    margin-right: 20px;
+}
+
+.form-wrapper label {
+    margin-bottom: 2px;
+    display: block;
+}
+
+.form-wrapper {
+    position: relative;
+}
+
+i {
+    color: red;
+    cursor: pointer;
+    position: absolute;
+    right: 4%;
+    top: 30%;
+}
+
+.dialog {
+    min-height: 40px;
+    width: 200px;
+    background-color: #f9bbb1;
+    position: absolute;
+    border-radius: 18px;
+    right: 15%;
+    top: -25%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.dialog span {
+    display: block;
+    font-size: 9px;
+    text-align: left;
+    padding: 5px 0px 5px 10px;
+    color: #000;
+    font-weight: bold;
+}
+
+.right-point {
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 40px solid #f9bbb1;
+    position: absolute;
+    top: 15%;
+    right: -10%;
+    transform: rotate(-80deg);
+}
+
+.form-group p, .form-wrapper p {
+    color: red;
+    margin: 10px 5px 20px 5px;
+    visibility: hidden;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 20px;
+    font-family: "Muli-Bold";
+    background: none;
+}
+
+.form-control:focus {
+    border: 1px solid tomato;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+select option[value=""][disabled] {
+    display: none;
+}
+
+button {
+    border: none;
+    width: 152px;
+    height: 40px;
+    margin: auto;
+    margin-top: 29px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #ffd80b;
+    font-size: 13px;
+    color: rgb(5, 5, 5);
+    text-transform: uppercase;
+    font-family: "Muli-SemiBold";
+    border-radius: 20px;
+    overflow: hidden;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    font-weight: bold;
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f11a09;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+button:hover:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.checkbox {
+    position: relative;
+}
+
+.checkbox label {
+    padding-left: 22px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 12px;
+    width: 13px;
+    border-radius: 2px;
+    background-color: #ebebeb;
+    border: 1px solid #ccc;
+    font-family: Material-Design-Iconic-Font;
+    color: #000;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.checkmark:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    content: '\f26b';
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+@media (max-width: 991px) {
+    .inner {
+        min-width: 768px;
+    }
+
+    .checkmark {
+        top: 50%;
+    }
+
+    .form {
+        box-shadow: none;
+    }
+
+    .dialog {
+        right: 18%;
+    }
+}
+
+@media (max-width: 768px) {
+    .inner {
+        min-width: auto;
+        background: none;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    form {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        box-shadow: none;
+    }
+
+    .checkmark {
+        top: 50%;
+    }
+
+    .dialog {
+        right: 20%;
+    }
+}
+
+.displayDetail {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.8s ease;
+}
+
+.hideDatail {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.form-bottom{
+    text-align: center;
+    margin: 25px 0px;
+    width: 100%;
+}
+
+.form-bottom span {
+    color: green;
+    cursor: pointer;
+}
+
+@media (min-width: 770px) {
+    .inner {     
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    form {  
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+}

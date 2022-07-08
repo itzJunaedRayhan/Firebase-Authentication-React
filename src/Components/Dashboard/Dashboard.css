@@ -1,0 +1,192 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Muli-Regular";
+    color: #666;
+    font-size: 13px;
+    margin: 0;
+}
+
+button {
+    font-family: "Muli-Regular";
+    color: rgb(201, 195, 195);
+    font-size: 13px;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+:focus {
+    outline: none;
+}
+
+
+.wrapper {
+    background-color: rgb(24, 22, 22);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inner {
+    height: 100%;
+    min-width: 1080px;
+    background: url("../../images/Abstract-Yellow-liquid-shape.png");
+    background-position: right center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.inner h3 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: "Muli-Bold";
+    text-align: center;
+    margin-bottom: 32px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.profile {
+    width: 50%;
+    padding: 25px 40px;
+    box-shadow: inset 10px 7px 7px #050505, inset -3px -3px 10px 3px #070707a6;
+}
+
+.profile h4 {
+    margin: 30px 0px;
+}
+
+.btn-group{
+    display: flex;
+    flex-direction: row;
+}
+
+
+button {
+    border: none;
+    width: 152px;
+    height: 40px;
+    margin: auto;
+    margin-top: 29px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #ffd80b;
+    font-size: 13px;
+    color: rgb(5, 5, 5);
+    text-transform: uppercase;
+    font-family: "Muli-SemiBold";
+    border-radius: 20px;
+    overflow: hidden;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    font-weight: bold;
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f11a09;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+button:hover:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+@media (max-width: 991px) {
+    .inner {
+        min-width: 768px;
+    }
+
+    .profile {
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .inner {
+        min-width: auto;
+        background: none;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .profile {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        box-shadow: none;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+}
+
+
+.form-bottom{
+    text-align: center;
+    margin: 25px 0px;
+    width: 100%;
+}
+
+.form-bottom span {
+    color: green;
+    cursor: pointer;
+}
+
+@media (min-width: 770px) {
+    .inner {     
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .profile {  
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    }
+}
