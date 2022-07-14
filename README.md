@@ -19,4 +19,4 @@ Technology Used:
 GitHub Code: https://github.com/itzJunaedRayhan/Firebase-Authentication-React.git
 
 
-Live Link:
+Live Link: https://web-genesis-signup-signin-with-firebase-1.netlify.app
