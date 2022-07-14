@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useContext } from 'react';
+import React, { useRef, useState} from 'react';
 import "../Sign_Up/SignUp.css"
 import { useNavigate } from "react-router-dom";
 import { useAuth } from '../../Contexts/AuthContext';
@@ -8,7 +8,6 @@ const SignIn = () => {
     const passwordRef = useRef();
     const [showPassDetail, setShoPassDetail] = useState(false);
     const [error, setError] = useState("");
-    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const {login} = useAuth();
 
@@ -16,7 +15,6 @@ const SignIn = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            setLoading(true);
             setError("");
             await login(emailRef.current.value, passwordRef.current.value);
             navigate("/dashboard")
@@ -24,11 +22,8 @@ const SignIn = () => {
             setError(error);
             console.log(error);
         }
-        setLoading(false);
     }
 
-
-    
 
 
     return (
@@ -37,7 +32,7 @@ const SignIn = () => {
 				<form className="RegistrationForm">
 					<h3>Log In</h3>
                     {error ? (
-                        <p className="danger">{JSON.stringify(error)}</p>
+                        <p className="Error" style={{textAlign: 'center', padding: '5px 3px 20px 3px'}}>"Please Try Again!"</p>
                     ) : (
                         ""
                     )}
@@ -64,5 +59,4 @@ const SignIn = () => {
 		</div>
     );
 };
-
 export default SignIn;

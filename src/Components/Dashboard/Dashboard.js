@@ -33,9 +33,10 @@ const Dashboard = () => {
                         <h4>{userInfo.firstName ? `First Name : ${userInfo.firstName}` : null}</h4>
                         <h4>{userInfo.lastName ? `Last Name : ${userInfo.lastName}` : null}</h4>
                         <h4>{userInfo.userName ? `UserName : ${userInfo.userName}` : null}</h4>
-                        <h4>{currentUser.email ? `Email : ${currentUser.email}` : null}</h4>
+                        <h4>{currentUser.email || userInfo.email ? `Email : ${currentUser.email}` : null}</h4>
                         <h4>{userInfo.phone ? `Phone : ${userInfo.phone}` : null}</h4>
-                        <h4>{currentUser.password ? `Password : ${currentUser.password }<h4/>` : null}</h4>
+                        <h4>{userInfo.password ? `Password : ${userInfo.password}` : null}</h4>
+                        <h4>{currentUser.password ? `Password : ${currentUser.password}` : null}</h4>
                     </div>
                     <div className='btn-group'>
                         <button type="submit" onClick={handleLogout} className="submitBtn" style={{marginRight: '15px'}}>Log Out</button>

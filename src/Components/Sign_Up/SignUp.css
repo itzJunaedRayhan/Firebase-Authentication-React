@@ -48,7 +48,7 @@ a:hover {
 }
 
 .inner {
-    height: 100%;
+    min-height: auto;
     min-width: 1080px;
     background: url("../../images/Abstract-Yellow-liquid-shape.png");
     background-position: right center;
@@ -68,7 +68,7 @@ a:hover {
 
 form {
     width: 50%;
-    padding: 25px 40px;
+    padding: 5px 40px;
     box-shadow: inset 10px 7px 7px #050505, inset -3px -3px 10px 3px #070707a6;
 }
 
@@ -92,6 +92,10 @@ form {
 
 .form-wrapper {
     position: relative;
+}
+
+.form-wrapper .Error {
+    color: red;
 }
 
 i {
@@ -136,10 +140,14 @@ i {
     transform: rotate(-80deg);
 }
 
+.swalStyle {
+    color: black;
+}
+
 .form-group p, .form-wrapper p {
-    color: red;
-    margin: 10px 5px 20px 5px;
-    visibility: hidden;
+    color: red !important;
+    margin: 10px 5px  10px 5px;
+    visibility: visible;
 }
 
 .form-control {
@@ -155,6 +163,11 @@ i {
 
 .form-control:focus {
     border: 1px solid tomato;
+}
+
+.Error {
+    font-size: 10px;
+    color: red;
 }
 
 select {
@@ -354,8 +367,13 @@ input[type=number] {
         transform: translateY(-50%);
     }
     form {  
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .form-group p, .form-wrapper p {
+        margin: 10px 5px  17px 5px;
     }
 }

@@ -83,7 +83,7 @@ button {
     width: 152px;
     height: 40px;
     margin: auto;
-    margin-top: 29px;
+    margin-top: 12px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -169,7 +169,7 @@ button:hover:before {
 
 .form-bottom{
     text-align: center;
-    margin: 25px 0px;
+    margin: 10px 0px 0px 0px;
     width: 100%;
 }
 
